@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="regform" onsubmit="return display()">
+        Name: <input type="text" name="name" id="cname">
+        <span id="nameerror" style="color:red;"></span><br><br>
+        Education: <input type="text" name="education" id="ceducation"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <div>
+        You entered name as <span id="displayName"></span> and education as <span id="displayEducation"></span>.
+    </div>
+    <script>
+        function display() {
+            var name = document.getElementById("cname").value.trim();
+            var education = document.getElementById("ceducation").value.trim();
+            if (name === "") {
+                document.getElementById("nameerror").innerText = "Name is required";
+                return false; // prevent form submission
+            } else {
+                document.getElementById("nameerror").innerText = "";
+            }
+            // Display the values
+            document.getElementById("displayName").innerText = name;
+            document.getElementById("displayEducation").innerText = education;
+            return false; // prevent form submission and page refresh
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+.gallery{
+    position: relative;
+    width: 200px;
+}
+.image-container {
+    width: 100px;
+}
+.caption{
+    position: absolute;
+    top: 0;left: 0;
+    width: 100px;height: 100px;
+    background: rgba(0,0,0,0.5);color: #fff;
+    opacity: 0;
+    display: flex;align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s;
+}
+
+.image .caption{
+    opacity: 1;
+}

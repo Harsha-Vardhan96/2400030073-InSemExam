@@ -1,0 +1,26 @@
+.dropdown li{
+    position: relative;
+    list-style:none;
+}
+.submenu{
+    display: none;
+    position: absolute;
+    background: #ddd0e0;
+}
+.dropdown li:hover .submenu{
+    display:block;
+    cursor: pointer;
+    background-color: chocolate;
+    color: rgb(255, 243, 219);
+}
+.mainmenu{
+    padding: 20px;
+}
+.dropdown{
+    background-color: rgb(141, 189, 94);
+    padding: 20px;
+    border-radius: 20px;
+    width: 120px;
+    align-items: center;
+    font-size: 10px;
+}
