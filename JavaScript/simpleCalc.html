@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple Calculator</title>
+        <style>
+            button {
+                padding: 5px 10px;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Calculator</h2>
+        Result: <span id="result"></span><br><br>
+        <input type="number" id="num1" placeholder="enter first number"><br><br>
+        <input type="number" id="num2" placeholder="enter second number"><br><br>
+        <button id="addbtn" onclick="Calc('+')">+</button>&nbsp;&nbsp;
+        <button id="subbtn" onclick="Calc('-')">-</button><br><br>
+        <button id="mulbtn" onclick="Calc('*')">*</button>&nbsp;&nbsp;
+        <button id="divbtn" onclick="Calc('/')">/</button><br><br>
+
+        <script>
+            function Calc(x){
+                let n1= parseFloat(document.getElementById("num1").value);
+                let n2= parseFloat(document.getElementById("num2").value);
+                let result;
+
+                if(isNaN(n1) || isNaN(n2)){
+                    document.getElementById("result").innerHTML = "please enter the number";
+                    return;
+                }
+                switch(x){
+                    case '+':
+                        result=n1+n2;break;
+                    case '-':
+                        result=n1-n2;break;
+                    case '*':
+                        result=n1*n2;break;
+                    case '/':
+                        if(n2===0){
+                            document.getElementById("result").innerHTML="exception";return;
+                        }else{
+                            result=n1/n2;break;
+                        }
+                    default: document.getElementById("result").innerHTML="invalid number";
+                }
+                document.getElementById("result").innerHTML= result;
+            }
+        </script>
+    </body>
+</html>

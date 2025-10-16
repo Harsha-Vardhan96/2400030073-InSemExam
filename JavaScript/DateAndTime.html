@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Date and Time</title>
+    </head>
+    <boby>
+        <h2>Current Time: </h2>
+        <p id="time"></p>
+        <script>
+            function updateTime(){
+                let now = new Date();
+                document.getElementById("time").innerHTML=now.toLocaleTimeString();
+                //document.getElementById("time").innerHTML=now.getMilliseconds();
+            }
+            setInterval(updateTime,1000);//Call ever second
+            updateTime();
+        </script>
+    </boby>
+</html>

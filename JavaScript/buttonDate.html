@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date and Time</title>
+    <style>
+        body {
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            padding: 20px;
+        }
+        button {
+            margin-right: 10px;
+            padding: 10px 15px;
+            font-size: 16px;
+        }
+        p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Click to Display the Date and Time</h2>
+    <button onclick="showDate()">Show Date</button>
+    <button onclick="showTime()">Show Time</button>
+    <p id="date"></p>
+    <p id="time"></p>
+
+    <script>
+        function showTime() {
+            const now = new Date();
+            document.getElementById("time").innerHTML = "Current Time: " + now.toLocaleTimeString();
+        }
+        function showDate() {
+            const now = new Date();
+            document.getElementById("date").innerHTML = "Current Date: " + now.toDateString();
+        }
+        
+        // setInterval(showTime, 1000);
+    </script>
+</body>
+</html>

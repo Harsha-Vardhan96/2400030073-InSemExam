@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Day</title>
+    </head>
+    <body>
+        <h2>Day Names</h2>
+        <input type="number" id="dayNum" placeholder="enter day number"><br><br>
+        <button id="daybtn" onclick="getDay()">Day Name</button><br><br>
+        <h3 id="dayName"></h3>
+        
+        <script>
+            function getDay(){
+                let n=parseInt(document.getElementById("dayNum").value);
+                let dayName;
+
+                switch(n){
+                    case 1: dayName="MONDAY";break;
+                    case 2: dayName="TUESDAY";break;
+                    case 3: dayName="WEDNESDAY";break;
+                    case 4: dayName="THURSDAY";break;
+                    case 5: dayName="FRIDAY";break;
+                    case 6: dayName="SATURDAY";break;
+                    case 7: dayName="SUNDAY";break;
+                    default: dayName="You are Dumb you bullshit";
+
+                }
+                document.getElementById("dayName").innerHTML="day Name: " + dayName;
+            }
+        </script>
+    </body>
+</html>

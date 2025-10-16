@@ -1,0 +1,34 @@
+<!DOCTYPE html>>
+<html>
+    <head>
+        <title>Students Marks</title>
+    </head>
+    <body>
+        <h2>Student Gardes Calculator</h2>
+        <input type="number" id="marks" placeholder="enter marks"><br><br>
+        <button id="gradeBtn" onclick="CalcGarde()" >Calculate Garde</button><br><br>
+        <h3 id="grade"></h3>
+        <script>
+            function CalcGarde(){
+                let marks = parseFloat(document.getElementById("marks").value);
+                let grade;
+
+                if(marks>=90){
+                    grade="O";
+                }else if(marks>=80){
+                    grade="A+";
+                }else if(marks>=70){
+                    grade="A";
+                }else if(marks>=60){
+                    grade="B";
+                }else if(marks>=50){
+                    grade="C";
+                }else if(marks<50){
+                    grade="fail";
+                }
+
+                document.getElementById("grade").innerHTML="Grade: " + grade;
+            }
+        </script>
+    </body>
+</html>

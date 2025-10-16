@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: grid;
+    grid-template-rows: auto 100px auto auto auto;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #f3f3f3;
+    border-bottom: 1px solid #ccc;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+nav ul {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: end;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 8px;
+}
+
+/* Hero Section */
+.hero {
+    height: 100px;
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+}
+
+/* About Us */
+.about {
+    background-color: #f5f3d0;
+    padding: 10px;
+    font-size: 8px;
+}
+
+.about h2 {
+    margin-bottom: 10px;
+}
+
+/* Boxes */
+.boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    padding: 8px;
+    font-size: 8px;
+}
+
+.box {
+    border: 1px solid #ccc;
+    padding: 8px;
+    background-color: white;
+    font-size: 8px;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 10px;
+}
